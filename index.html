@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrkvaGL Test</title>
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        padding: 0; margin: 0; border: none;
+        overflow: hidden;
+      }
+      body {
+        position: relative; left: 0; top: 0;
+        display: flex; align-items: center;
+        background-color: black;
+      }
+      #game {
+        width: fit-content; height: fit-content;
+        margin: auto;
+      }
+      #game-overlay {
+        width: 100%; height: 100%;
+        position: absolute; left: auto; top: 0;
+        z-index: 1; font-size: 1px;
+      }
+      #fps-label {
+        font: 8em monospace;
+        position: absolute; left: 0; top: 0;
+      }
+      #guide-label {
+        font: 8em monospace;
+        position: absolute; left: 20em; top: 5em;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="game">
+      <canvas id="game-canvas"></canvas>
+      <div id="game-overlay">
+        <p id="fps-label">FPS:0</p>
+        <p id="guide-label">Press space to play a sound</p>
+      </div>
+    </main>
+    <script src="example.js" type="module"></script>
+  </body>
+</html>
