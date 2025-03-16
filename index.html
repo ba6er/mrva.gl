@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MrkvaGL Test</title>
+    <title>MrvaGL Test</title>
     <style>
       *, *::before, *::after {
         box-sizing: border-box;
@@ -28,9 +28,15 @@
         font: 8em monospace;
         position: absolute; left: 0; top: 0;
       }
-      #guide-label {
+      #example-label {
         font: 8em monospace;
         position: absolute; left: 20em; top: 5em;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      #guide-label {
+        font: 8em monospace;
+        position: absolute; left: 20em; top: 4em;
         transform: translateX(-50%);
         text-align: center;
       }
@@ -41,6 +47,7 @@
       <canvas id="game-canvas"></canvas>
       <div id="game-overlay">
         <p id="fps-label">FPS:0</p>
+        <p id="example-label">This is a mrva.gl example</p>
         <p id="guide-label">Press space to play a sound</p>
       </div>
     </main>
